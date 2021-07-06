@@ -1,19 +1,20 @@
-== rhoas kafka
+= rhoas kafka
 
+[role="_abstract"]
 ifdef::env-github,env-browser[:relfilesuffix: .adoc]
 
 Create, view, use, and manage your Apache Kafka instances
 
 === Options inherited from parent commands
 
-....
-  -d, --debug   Enable debug mode
-  -h, --help    Show help for a command
-....
+  -d, --debug::   Enable debug mode
+  -h, --help::    Show help for a command
 
-=== SEE ALSO
+[discrete]
+== See Also
 
 * link:rhoas{relfilesuffix}[rhoas]	 - RHOAS CLI
+* link:rhoas_kafka_consumer-group{relfilesuffix}[rhoas kafka consumer-group]	 - Describe, list, and delete consumer groups for the current Kafka instance.
 * link:rhoas_kafka_create{relfilesuffix}[rhoas kafka create]	 - Create an Apache Kafka instance
 * link:rhoas_kafka_delete{relfilesuffix}[rhoas kafka delete]	 - Delete an Apache Kafka instance
 * link:rhoas_kafka_describe{relfilesuffix}[rhoas kafka describe]	 - View configuration details of an Apache Kafka instance
