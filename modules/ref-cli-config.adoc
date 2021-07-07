@@ -1,28 +1,22 @@
-= rhoas whoami
+= rhoas config
 
 [role="_abstract"]
 ifdef::env-github,env-browser[:relfilesuffix: .adoc]
 
-Print current username
+Change specific configuration for the options
 
 [discrete]
 == Synopsis
 
-Print the username of the currently active user.
+Change configuration of the cli by executing one of the available subcommands
 
-This command prints the username associated with the user currently logged in.
-
-
-....
-rhoas whoami [flags]
-....
 
 [discrete]
 == Examples
 
 ....
-# print current username
-$ rhoas whoami
+# change dev preview configuration
+$ rhoas config dev-preview true
 
 ....
 
@@ -36,4 +30,5 @@ $ rhoas whoami
 == See also
 
 * link:rhoas{relfilesuffix}[rhoas]	 - RHOAS CLI
+* link:rhoas_config_dev-preview{relfilesuffix}[rhoas config dev-preview]	 - Sets development preview features in config
 
