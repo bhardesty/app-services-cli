@@ -1,8 +1,8 @@
+ifdef::env-github,env-browser[:context: cmd]
+[id='ref-rhoas-kafka-create_{context}']
 = rhoas kafka create
 
 [role="_abstract"]
-ifdef::env-github,env-browser[:relfilesuffix: .adoc]
-
 Create an Apache Kafka instance
 
 [discrete]
@@ -25,7 +25,7 @@ rhoas kafka create [flags]
 $ rhoas kafka create
 
 # create a Kafka instance
-$ rhoas kafka create my-kafka-instance
+$ rhoas kafka create --name my-kafka-instance
 
 # create a Kafka instance and output the result in YAML
 $ rhoas kafka create -o yaml
@@ -35,19 +35,27 @@ $ rhoas kafka create -o yaml
 [discrete]
 == Options
 
-  -o, --output:: string     Format in which to display the Kafka instance. Choose from: "json", "yml", "yaml" (default "json")
-      --provider:: string   Cloud Provider ID
-      --region:: string     Cloud Provider Region ID
-      --use::               Set the new Kafka instance to the current instance (default true)
+      `--name` _string_::       Unique name of the Kafka instance
+  `-o`, `--output` _string_::   Specify the output format. Choose from: "json", "yaml", "yml"
+      `--provider` _string_::   Cloud Provider ID
+      `--region` _string_::     Cloud Provider Region ID
+      `--use`::                 Set the new Kafka instance to the current instance (default true)
+  `-w`, `--wait`::              Wait until the Kafka instance is created
 
 [discrete]
 == Options inherited from parent commands
 
-  -d, --debug::   Enable debug mode
-  -h, --help::    Show help for a command
+  `-h`, `--help`::      Show help for a command
+  `-v`, `--verbose`::   Enable verbose mode
 
 [discrete]
 == See also
 
-* link:rhoas_kafka{relfilesuffix}[rhoas kafka]	 - Create, view, use, and manage your Apache Kafka instances
+
+ifdef::env-github,env-browser[]
+* link:rhoas_kafka.adoc#rhoas-kafka[rhoas kafka]	 - Create, view, use, and manage your Kafka instances
+endif::[]
+ifdef::pantheonenv[]
+* link:{path}#ref-rhoas-kafka_{context}[rhoas kafka]	 - Create, view, use, and manage your Kafka instances
+endif::[]
 

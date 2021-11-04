@@ -1,8 +1,8 @@
+ifdef::env-github,env-browser[:context: cmd]
+[id='ref-rhoas-kafka-consumer-group-list_{context}']
 = rhoas kafka consumer-group list
 
 [role="_abstract"]
-ifdef::env-github,env-browser[:relfilesuffix: .adoc]
-
 List all consumer groups
 
 [discrete]
@@ -29,18 +29,26 @@ $ rhoas kafka consumer-group list -o json
 [discrete]
 == Options
 
-      --limit:: int32     The maximum number of consumer groups to be returned (default 1000)
-  -o, --output:: string   Format in which to display the consumer groups. Choose from: "json", "yml", "yaml"
-      --topic:: string    Fetch the consumer groups for a specific Kafka topic
+  `-o`, `--output` _string_::   Specify the output format. Choose from: "json", "yaml", "yml"
+      `--page` _int32_::        Current page number for list of consumer groups (default 1)
+      `--search` _string_::     Text search to filter consumer groups by ID
+      `--size` _int32_::        Maximum number of consumer groups to be returned per page (default 10)
+      `--topic` _string_::      Fetch the consumer groups for a specific Kafka topic
 
 [discrete]
 == Options inherited from parent commands
 
-  -d, --debug::   Enable debug mode
-  -h, --help::    Show help for a command
+  `-h`, `--help`::      Show help for a command
+  `-v`, `--verbose`::   Enable verbose mode
 
 [discrete]
 == See also
 
-* link:rhoas_kafka_consumer-group{relfilesuffix}[rhoas kafka consumer-group]	 - Describe, list, and delete consumer groups for the current Kafka instance.
+
+ifdef::env-github,env-browser[]
+* link:rhoas_kafka_consumer-group.adoc#rhoas-kafka-consumer-group[rhoas kafka consumer-group]	 - Describe, list, and delete consumer groups for the current Apache Kafka instance
+endif::[]
+ifdef::pantheonenv[]
+* link:{path}#ref-rhoas-kafka-consumer-group_{context}[rhoas kafka consumer-group]	 - Describe, list, and delete consumer groups for the current Apache Kafka instance
+endif::[]
 

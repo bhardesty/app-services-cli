@@ -1,8 +1,8 @@
+ifdef::env-github,env-browser[:context: cmd]
+[id='ref-rhoas-kafka-consumer-group-delete_{context}']
 = rhoas kafka consumer-group delete
 
 [role="_abstract"]
-ifdef::env-github,env-browser[:relfilesuffix: .adoc]
-
 Delete a consumer group
 
 [discrete]
@@ -20,24 +20,30 @@ rhoas kafka consumer-group delete [flags]
 
 ....
 # delete a consumer group
-$ rhoas kafka consumer-group delete consumer_group_1
+$ rhoas kafka consumer-group delete --id consumer_group_1
 
 ....
 
 [discrete]
 == Options
 
-      --id:: string   The unique ID of the consumer group to delete
-  -y, --yes::         Skip confirmation to forcibly delete a consumer group
+      `--id` _string_::   The unique ID of the consumer group to delete
+  `-y`, `--yes`::         Skip confirmation of this action 
 
 [discrete]
 == Options inherited from parent commands
 
-  -d, --debug::   Enable debug mode
-  -h, --help::    Show help for a command
+  `-h`, `--help`::      Show help for a command
+  `-v`, `--verbose`::   Enable verbose mode
 
 [discrete]
 == See also
 
-* link:rhoas_kafka_consumer-group{relfilesuffix}[rhoas kafka consumer-group]	 - Describe, list, and delete consumer groups for the current Kafka instance.
+
+ifdef::env-github,env-browser[]
+* link:rhoas_kafka_consumer-group.adoc#rhoas-kafka-consumer-group[rhoas kafka consumer-group]	 - Describe, list, and delete consumer groups for the current Apache Kafka instance
+endif::[]
+ifdef::pantheonenv[]
+* link:{path}#ref-rhoas-kafka-consumer-group_{context}[rhoas kafka consumer-group]	 - Describe, list, and delete consumer groups for the current Apache Kafka instance
+endif::[]
 
