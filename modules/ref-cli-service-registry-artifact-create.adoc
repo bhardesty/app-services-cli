@@ -3,7 +3,7 @@ ifdef::env-github,env-browser[:context: cmd]
 = rhoas service-registry artifact create
 
 [role="_abstract"]
-[beta] Creates new artifact from file or standard input
+Creates new artifact from file or standard input
 
 [discrete]
 == Synopsis
@@ -32,8 +32,6 @@ If an artifact with the provided artifact ID already exists, the command will fa
 When the --group parameter is missing, the command uses the "default" group.
 when the --instance-id is missing, the command creates a new artifact for the currently active Service Registry instance (displayed in rhoas service-registry describe)
 
-This command is available as part of the Development Preview release.
-
 
 ....
 rhoas service-registry artifact create [flags]
@@ -60,7 +58,7 @@ rhoas service-registry artifact create --type=JSON my-artifact.json
   `-g`, `--group` _string_::       Artifact group (default "default")
       `--instance-id` _string_::   ID of the Service Registry instance to be used. By default, uses the currently selected instance
       `--name` _string_::          Custom name of the artifact
-  `-o`, `--output` _string_::      Format in which to display the Service Registry instance (choose from: "json", "yml", "yaml") (default "json")
+  `-o`, `--output` _string_::      Output format (json, yaml, yml) (default "json")
   `-t`, `--type` _string_::        Type of artifact. Choose from: AVRO, PROTOBUF, JSON, OPENAPI, ASYNCAPI, GRAPHQL, KCONNECT, WSDL, XSD, XML
       `--version` _string_::       Custom version of the artifact (for example 1.0.0)
 
@@ -75,9 +73,9 @@ rhoas service-registry artifact create --type=JSON my-artifact.json
 
 
 ifdef::env-github,env-browser[]
-* link:rhoas_service-registry_artifact.adoc#rhoas-service-registry-artifact[rhoas service-registry artifact]	 - [beta] Manage Service Registry artifacts
+* link:rhoas_service-registry_artifact.adoc#rhoas-service-registry-artifact[rhoas service-registry artifact]	 - Manage Service Registry artifacts
 endif::[]
 ifdef::pantheonenv[]
-* link:{path}#ref-rhoas-service-registry-artifact_{context}[rhoas service-registry artifact]	 - [beta] Manage Service Registry artifacts
+* link:{path}#ref-rhoas-service-registry-artifact_{context}[rhoas service-registry artifact]	 - Manage Service Registry artifacts
 endif::[]
 
